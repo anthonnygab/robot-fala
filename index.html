@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="photo-logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robo-Fala</title>
+    <style>
+
+body {
+    background: linear-gradient(to right, #e0e0e0, #f8f9fa);
+}
+
+body, ul, li, a, h1 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    background-color: #f8f9fa; 
+    padding: 10px 20px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+nav ul {
+    display: flex;
+    align-items: center; 
+}
+
+nav li {
+    margin-right: 20px; 
+}
+
+nav li:last-child {
+    margin-right: 0; 
+}
+
+nav a {
+    display: flex;
+    align-items: center; 
+}
+
+nav img {
+    max-height: 50px; 
+    margin-right: 10px; 
+}
+
+nav h1 {
+    font-size: 1.5rem; 
+    font-weight: normal; 
+}
+
+@media (max-width: 600px) {
+    
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+#rob-speak {
+    font-family: fantasy;
+    color: #26619C;
+}
+
+.table-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.table-container img {
+    width: 500px; 
+    height: 300px; 
+    object-fit: cover;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+       <nav>
+         <ul>
+            <li>
+                <a>
+                    <img src="photo-logo.png">
+                </a>
+            </li>
+            <li>
+                <a>
+                    <h1 id="rob-speak">Robo-Fala</h1>
+                </a>
+            </li>
+         </ul>
+       </nav>
+    </header>
+
+    <main>
+       <div class="table-container">
+         <table>
+            <tr>
+                <td>
+                    <a href="espanhol.html">
+                        <img src="argentina (2).jpeg">
+                    </a>
+                </td>
+                <td>
+                    <a href="english.html">
+                        <img src="eua.jpeg">
+                    </a>
+                </td>
+            </tr>
+         </table>
+       </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

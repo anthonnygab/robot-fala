@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="photo-logo.png">
+    <title>Robo Habla Español</title>
+    <style>
+      body {
+       background: linear-gradient(90deg, #74ACDF 33.33%, #FFFFFF );
+      }
+
+      #nav-volver {
+        color: white;
+        text-decoration: none;
+      }
+
+      .form-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #tenes-que-hablar {
+        font-family: Arial, Helvetica, sans-serif;
+        border: none;
+        outline: none;
+        border-radius: 15px;
+        padding: 10px;
+      }
+
+      #hablar-button {
+        background-color: #0770d1;
+        color: white;
+        font-weight: bolder;
+        border: none;
+        outline: none;
+        border-radius: 15px;
+        padding: 10px;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+
+      #hablar-button:hover {
+        background-color: #709cc5;
+      }
+
+      #div-p {
+        background-color: #0988ff6c;
+        color: white;
+        font-family: cursive;
+        font-weight: bold;
+        text-align: center;
+        border: none;
+        border: none;
+        border-radius: 15px;
+        padding: 10px; 
+      }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" id="nav-volver">VOLVER</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <p id="div-p">Escreva abaixo</p>
+            <textarea id="tenes-que-hablar" rows="10" cols="100"></textarea>
+            <br><br>
+            <button id="hablar-button" onclick="hablar()">Hablar</button>
+        </div>
+    </main>
+
+    <script>
+
+    function hablar() {
+    var text = document.getElementById('tenes-que-hablar').value;
+
+    var speech = new SpeechSynthesisUtterance();
+
+    speech.text = text;
+
+    speech.lang = 'es-AR';
+
+    speech.rate = 1;
+
+    speech.pitch = 1;
+
+    speech.volume = 1;
+
+    window.speechSynthesis.speak(speech);
+}
+    </script>
+</body>
+</html>
